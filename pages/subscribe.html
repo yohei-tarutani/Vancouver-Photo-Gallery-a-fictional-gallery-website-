@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscribe - Vancouver Photo Gallery</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <!-- CSS(for style, variables) -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/subscribe.css">
+  <!-- Fontawesome (for icons) -->
+  <script src="https://kit.fontawesome.com/2abb043da7.js" crossorigin="anonymous"></script>
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,300;8..144,400;8..144,500&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <!-- Logo and Open menu icon (Mobile default) -->
+      <div class="header-top">
+        <h1>
+          <a class="header-logo-default" href="../index.html"><img src="../images/gallery-logo.png"
+              alt="gallery logo"></a>
+        </h1>
+        <a href="#">
+          <i class="fa-solid fa-bars" aria-hidden="true" id="menu-open"></i><span class="fa-sr-only">open menu
+            icon</span>
+        </a>
+      </div>
+      <!-- Close menu icon and Menu list (Opened menu page)  -->
+      <div class="menu-list-container" id="menu-list-container">
+        <a href="#">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i><span class="fa-sr-only">close menu
+            icon</span>
+        </a>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../pages/exhibition.html">Exhibition</a></li>
+          <li><a href="../pages/reference.html">Reference</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </div>
+      <!-- Logo and action buttons (Middle screen) -->
+      <div class="header-middle">
+        <h1 class="header-logo-bigger">
+          <a href="../index.html"><img src="../images/gallery-logo.png" alt="gallery logo"></a>
+        </h1>
+        <nav class="header-action-buttons-default">
+          <ul>
+            <li><a href="">BOOK<br>TICKETS</a></li>
+            <li><a href="">BECOME A<br>MEMBER</a></li>
+            <li><a href="">MAKE A<br>DONATION</a></li>
+          </ul>
+        </nav>
+        <nav class="header-action-buttons-bigger">
+          <ul>
+            <li><a href="">BOOK TICKETS</a></li>
+            <li><a href="">BECOME A MEMBER</a></li>
+            <li><a href="">MAKE A DONATION</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Menu items (Large screen) -->
+      <nav class="header-menu-items">
+        <ul class="home-menu-list">
+          <li class="menu1"><a href="../index.html">Home</a></li>
+          <li class="menu2"><a href="../pages/exhibition.html">Exhibition</a></li>
+          <li class="menu3"><a href="../pages/reference.html">Reference</a></li>
+          <li class="menu4"><a href="#about">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero-image / background-image is applied with style.css -->
+    <div class="hero-image">
+    </div>
+    <div class="main-container">
+      <!-- Form title and text -->
+      <div class="title-text">
+        <div class="title">
+          <h2>E-News Sign Up</h2>
+        </div>
+        <p>Stay connected with the Vancouver Photo Gallery!<br>
+          Sign up to receive email updates about our exhibitions, programs, special offers, and more. You can
+          unsubscribe anytime.
+        </p>
+      </div>
+      <!-- Forms -->
+      <section class="form-section">
+        <h3>Subscribe to our email list</h3>
+        <span class="required-mark">*</span>
+        <span class="required-text">indicates required</span>
+
+        <form action="#" method="post">
+          <label for="email">Email Address<span class="required-mark"> *</span></label>
+          <input type="email" id="email" name="email" placeholder="example@email.com" required>
+          <label for="first-name">First Name<span class="required-mark"> *</span></label>
+          <input type="text" id="first-name" name="first-name" placeholder="Your first name" required>
+          <label for="last-name">Last Name<span class="required-mark"> *</span></label>
+          <input type="text" id="last-name" name="last-name" placeholder="Your last name" required>
+          <input type="submit" value="SUBSCRIBE" class="button">
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container" id="about">
+      <div class="footer-top">
+        <!-- Address section -->
+        <section class="address">
+          <h4>ADDRESS</h4>
+          <p>100 West 49th Avenue<br>
+            Vancouver, B.C. V5Y 2Z6</p>
+          <img src="../images/rough-map.png" alt="location map">
+        </section>
+        <!-- Menu section -->
+        <section class="footer-menu">
+          <h4>MENU</h4>
+          <nav class="footer-menu-items">
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../pages/exhibition.html">Exhibition</a></li>
+              <li><a href="">Subscribe</a></li>
+              <li><a href="../pages/reference.html">Reference</a></li>
+            </ul>
+          </nav>
+        </section>
+        <!-- Contact-Us (sns/action buttons) section -->
+        <section>
+          <h4>CONTACT US</h4>
+          <ul class="sns-icons">
+            <li>
+              <a href=""><i class="fa-brands fa-facebook" aria-hidden="true"></i><span class="fa-sr-only">Facebook
+                  account</span>
+              </a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-square-x-twitter" aria-hidden="true"></i><span
+                  class="fa-sr-only">X-twitter account</span>
+              </a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-square-instagram" aria-hidden="true"></i><span
+                  class="fa-sr-only">Instagram account</span>
+              </a>
+            </li>
+          </ul>
+          <nav class="footer-buttons">
+            <ul>
+              <li><a href="">BOOK TICKETS</a></li>
+              <li><a href="">BECOME A MEMBER</a></li>
+              <li><a href="">MAKE A DONATION</a></li>
+            </ul>
+          </nav>
+        </section>
+        <!-- Gallery Hours section -->
+        <section class="open-hours">
+          <h4>GALLERY HOURS</h4>
+          <ul class="open-days">
+            <li>
+              <span class="days">Monday</span><span class="time"> -- CLOSED --</span>
+            </li>
+            <li>
+              <span class="days">Tuesday</span><span class="time">-- CLOSED --</span>
+            </li>
+            <li>
+              <span class="days">Wednesday</span><span class="time">10AM - 5PM</span>
+            </li>
+            <li>
+              <span class="days">Thursday</span><span class="time">10AM - 5PM</span>
+            </li>
+            <li>
+              <span class="days">Friday</span><span class="time">10AM - 5PM</span>
+            </li>
+            <li>
+              <span class="days">Saturday</span><span class="time">10AM - 5PM</span>
+            </li>
+            <li>
+              <span class="days">Sunday</span><span class="time">10AM - 5PM</span>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <!-- Privacy Policy and Logo-->
+    <div class="footer-bottom">
+      <div class="footer-policy">
+        <span>&copy; Vancouver Photo Gallery 2023 all rights reserved</span><br>
+        <a href=""><span>Privacy Policy</span></a>
+      </div>
+      <a href="#"><img src="../images/gallery-logo.png" alt="gallery logo"></a>
+      <a href="#"><i class="return-top fa-solid fa-chevron-up" aria-hidden="true"></i><span class="fa-sr-only">Return
+          top button</span></a>
+    </div>
+
+  </footer>
+  <script src="../scripts/menu.js" defer></script>
+</body>
+
+</html>

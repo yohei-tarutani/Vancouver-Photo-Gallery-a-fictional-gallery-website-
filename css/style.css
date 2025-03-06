@@ -1,0 +1,875 @@
+@charset "UTF-8";
+
+/* GENERAL */
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: var(--layout--extra-large-spacing);
+  height: 100vh;
+  font-family: "Roboto Flex", "Lucida Grande", "Trebuchet MS", Helvetica, arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--colors--primary-darkgrey);
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  letter-spacing: .1rem;
+}
+
+h1 {
+  margin-top: .5rem;
+}
+
+h2 {
+  margin-top: var(--layout--larger-medium-spacing);
+  font-size: var(--typography--font-size--extra-large);
+  font-family: "Trebuchet MS";
+}
+
+h3 {
+  font-size: var(--typography--font-size--large);
+  font-family: "Trebuchet MS";
+  margin: .4rem 0 var(--layout--small-spacing);
+  line-height: 1.4;
+}
+
+h4 {
+  font-size: var(--typography--font-size--large);
+  padding-top: var(--layout--larger-small-spacing);
+}
+
+p {
+  font-size: var(--typography--font-size--medium);
+  font-weight: 300;
+  line-height: var(--lineheight--medium);
+}
+
+
+/* HEADER */
+
+.header-container {
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+.header-top {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  justify-items: stretch;
+  align-items: center;
+  margin: var(--layout--medium-spacing) 0;
+}
+
+.header-top img {
+  width: 230px;
+  height: auto;
+}
+
+.header-top a:last-child {
+  font-size: 2.2rem;
+  color: var(--colors--text-point);
+  padding-bottom: .9rem;
+  transition-duration: var(--transition--duration-very-short);
+}
+
+.header-top a:last-child:hover {
+  opacity: .3;
+}
+
+/* HEADER - Menu button(Opened menu) */
+
+.menu-list-container {
+  display: none;
+}
+
+.menu-list-container.open {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: var(--colors--primary-darkgrey);
+}
+
+.menu-list-container.open i {
+  position: fixed;
+  top: var(--layout--large-spacing);
+  right: var(--layout--very-large-spacing);
+  z-index: 20;
+  color: var(--colors--background);
+  font-size: 2.5rem;
+  transition-duration: var(--transition--duration-very-short);
+}
+
+.menu-list-container.open i:hover {
+  color: var(--colors--primary-red);
+}
+
+.menu-list-container.open i:active {
+  transition-duration: 0s;
+  color: var(--colors--shop-text-area);
+}
+
+.menu-list-container.open ul {
+  list-style-type: none;
+  margin-top: 8rem;
+  text-align: center;
+}
+
+.menu-list-container.open ul a {
+  color: var(--colors--background);
+  font-size: var(--typography--font-size--medium);
+  line-height: var(--lineheight--large);
+  font-family: "Trebuchet MS";
+  font-weight: bold;
+  transition-duration: var(--transition--duration-short);
+}
+
+.menu-list-container.open a:hover {
+  color: var(--colors--primary-red);
+  text-decoration: underline;
+}
+
+.menu-list-container.open a:active {
+  transition-duration: 0s;
+  color: var(--colors--shop-text-area);
+}
+
+.menu-list-container.open .opened-menu-page-list {
+  margin-top: 4rem;
+}
+
+.menu-list-container.open .opened-menu-page-list a {
+  font-size: 1.4rem;
+}
+
+
+/* HEADER - Action button */
+
+.header-middle {
+  margin: var(--layout--larger-small-spacing) 0;
+}
+
+.header-logo-bigger {
+  display: none;
+}
+
+.header-action-buttons-default ul {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-action-buttons-default a {
+  font-size: .6rem;
+  border: 1px solid var(--colors--primary-red);
+  color: var(--colors--primary-red);
+  padding: .6rem .3rem;
+  display: inline-block;
+  margin-bottom: .7rem;
+  line-height: 1.3;
+  text-align: center;
+  letter-spacing: 1px;
+  width: 17vw;
+  transition-duration: var(--transition--duration-middle);
+}
+
+.header-action-buttons-default a:hover {
+  color: var(--colors--background);
+  background-color: var(--colors--primary-red);
+}
+
+.header-action-buttons-bigger {
+  display: none;
+}
+
+/* HEADER - Menu button(for Larger screen) */
+
+.header-menu-items {
+  display: none;
+}
+
+
+/* MAIN */
+
+.hero-image {
+  width: 100vw;
+  height: 40vh;
+  background-image: url("../images/hero-image-and-visit1-admission.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+main section {
+  padding-bottom: var(--layout--larger-small-spacing);
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+.whats-on {
+  padding-top: var(--layout--larger-medium-spacing);
+}
+
+article {
+  margin-bottom: var(--layout--large-spacing);
+}
+
+main img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  object-fit: cover;
+  object-position: center;
+  padding-bottom: 0;
+}
+
+.button {
+  display: block;
+  text-align: center;
+  background-color: var(--colors--primary-darkgrey);
+  color: var(--colors--background);
+  font-size: var(--typography--font-size--small);
+  padding: var(--layout--larger-small-spacing) 0;
+  border: 1px solid var(--colors--primary-darkgrey);
+  transition-duration: var(--transition--duration-long);
+}
+
+.button:hover {
+  background-color: var(--colors--background);
+  color: var(--colors--primary-darkgrey);
+  border: 1px solid var(--colors--primary-darkgrey);
+}
+
+/* WHAT'S ON NOW (EXHIBITION) */
+
+.grid-bigger-exhibition {
+  border-bottom: 1px solid var(--colors--primary-darkgrey);
+}
+
+.exhibition-photo {
+  transition-duration: var(--transition--duration-short);
+}
+
+.exhibition-photo:hover {
+  opacity: var(--opacity--middle);
+}
+
+.exhibition-text {
+  padding: var(--layout--medium-spacing) var(--layout--medium-spacing) var(--layout--larger-medium-spacing);
+  background-color: var(--colors--text-area-default);
+  transition-duration: var(--transition--duration-long);
+}
+
+.exhibition-text:hover {
+  background-color: var(--colors--exhibition-text-area);
+}
+
+.more-exhibitions {
+  text-align: center;
+  margin: 2.3rem auto 3.5rem;
+  width: 60vw;
+}
+
+.more-exhibitions a {
+  display: block;
+  text-align: center;
+  padding: var(--layout--larger-small-spacing) var(--layout--medium-spacing);
+  color: var(--colors--primary-darkgrey);
+  background-color: var(--colors--background);
+  border: 1px solid var(--colors--primary-darkgrey);
+  font-size: var(--typography--font-size--small);
+  transition-duration: var(--transition--duration-long);
+}
+
+.more-exhibitions a:hover {
+  color: var(--colors--background);
+  background-color: var(--colors--primary-darkgrey);
+}
+
+/* PLAN YOUR VISIT */
+
+.grid-bigger-visit {
+  border-bottom: 1px solid var(--colors--primary-darkgrey);
+}
+
+.plan-visit {
+  padding-top: var(--layout--larger-small-spacing);
+}
+
+.workshop {
+  padding-bottom: var(--layout--larger-small-spacing);
+}
+
+.admission-photo,
+.tours-photo,
+.workshop-photo {
+  transition-duration: var(--transition--duration-short);
+}
+
+.admission-photo:hover,
+.tours-photo:hover,
+.workshop-photo:hover {
+  opacity: var(--opacity--middle);
+}
+
+.admission-text,
+.tours-text,
+.workshop-text {
+  padding: var(--layout--medium-spacing) var(--layout--medium-spacing) var(--layout--larger-medium-spacing);
+  background-color: var(--colors--text-area-default);
+  transition-duration: var(--transition--duration-long);
+}
+
+.admission-text:hover,
+.tours-text:hover,
+.workshop-text:hover {
+  background-color: var(--colors--visit-text-area);
+}
+
+/* RESTAURANT AND SHOP */
+
+.bistro-shop {
+  padding-top: var(--layout--larger-small-spacing);
+}
+
+.bistro-photo,
+.shop-photo {
+  transition-duration: var(--transition--duration-short);
+}
+
+.bistro-photo:hover,
+.shop-photo:hover {
+  opacity: var(--opacity--middle);
+}
+
+.bistro-text,
+.shop-text {
+  padding: var(--layout--medium-spacing) var(--layout--medium-spacing) var(--layout--larger-medium-spacing);
+  background-color: var(--colors--text-area-default);
+  transition-duration: var(--transition--duration-long);
+}
+
+.bistro-text:hover,
+.shop-text:hover {
+  background-color: var(--colors--shop-text-area);
+}
+
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+.footer-container {
+  border-top: 1px solid var(--colors--primary-darkgrey);
+  padding: var(--layout--larger-small-spacing) 0;
+}
+
+footer p {
+  font-size: var(--typography--font-size--smaller-medium);
+  font-weight: 100;
+  line-height: var(--lineheight--small);
+}
+
+/* ADDRESS */
+
+.address img {
+  max-width: 250px;
+  height: auto;
+  vertical-align: bottom;
+}
+
+/* MENU */
+
+.footer-menu {
+  display: none;
+}
+
+/* CONTACT US */
+
+.sns-icons {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.sns-icons a {
+  padding: 0 var(--layout--small-spacing);
+  font-size: 2.3rem;
+  color: var(--colors--primary-darkgrey);
+}
+
+.footer-buttons a {
+  font-size: .9rem;
+  border: 1px solid var(--colors--primary-red);
+  color: var(--colors--primary-red);
+  padding: var(--layout--small-spacing);
+  display: inline-block;
+  line-height: 1.6;
+  text-align: center;
+  width: 170px;
+}
+
+.footer-buttons a:first-child {
+  margin-top: var(--typography--font-size--large);
+  transition-duration: var(--transition--duration-middle);
+}
+
+.footer-buttons a:hover {
+  color: var(--colors--background);
+  background-color: var(--colors--primary-red);
+}
+
+/* GALLERY HOURS */
+
+.open-days li {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+}
+
+.open-days span {
+  font-size: var(--typography--font-size--smaller-medium);
+  line-height: 2.8;
+  font-weight: 100;
+}
+
+.days {
+  justify-self: end;
+  padding-right: var(--layout--small-spacing);
+}
+
+.time {
+  justify-self: start;
+  padding-left: var(--layout--small-spacing);
+}
+
+/* FOOTER BOTTOM (POLICY, LOGO) */
+
+.footer-bottom {
+  padding-top: var(--layout--larger-medium-spacing);
+}
+
+.footer-bottom img {
+  width: 150px;
+}
+
+.footer-policy {
+  margin-bottom: var(--layout--medium-spacing);
+}
+
+.footer-policy span {
+  font-size: var(--typography--font-size--smaller-medium);
+  line-height: var(--layout--medium-spacing);
+  font-weight: 100;
+}
+
+.footer-policy a {
+  color: var(--colors--primary-red);
+  text-decoration: underline;
+}
+
+.return-top {
+  color: var(--colors--background);
+  background-color: var(--colors--primary-darkgrey);
+  border: 1.5px solid var(--colors--background);
+  opacity: .8;
+  font-size: var(--typography--font-size--very-large);
+  padding: .7rem;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 0 .2rem .2rem 0;
+  border-radius: 5px;
+  transition-duration: var(--transition--duration-very-short);
+}
+
+.return-top:hover {
+  opacity: .5;
+}
+
+
+
+
+/* MEDIA QUERY */
+
+/* MIN-WIDTH 500px */
+
+@media screen and (min-width: 500px) {
+  .header-action-buttons-default a {
+    font-size: .7rem;
+  }
+}
+
+
+/* MIN-WIDTH 700px */
+
+@media screen and (min-width: 700px) {
+
+  /* MAIN */
+
+  .hero-image {
+    height: 50vh;
+  }
+
+
+  /* FOOTER */
+
+  .footer-top {
+    margin: var(--layout--extra-large-spacing);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  /* ADDRESS */
+
+  .address img {
+    max-width: 250px;
+  }
+
+  /* FOOTER MENU */
+
+  .footer-menu {
+    display: block;
+  }
+
+  .footer-menu h4 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .footer-menu-items a {
+    font-size: var(--typography--font-size--larger-medium);
+    font-family: "Trebuchet MS";
+    font-weight: 300;
+    color: var(--colors--primary-darkgrey);
+    line-height: 4.7;
+    text-decoration: underline;
+    transition-duration: var(--transition--duration-short);
+  }
+
+  .footer-menu-items a:hover {
+    opacity: var(--opacity--middle);
+    color: var(--colors--primary-red);
+  }
+
+  /* CONTACT US */
+
+  .sns-icons a {
+    font-size: 2.7rem;
+    padding: 0 .7rem;
+  }
+
+  .footer-buttons li {
+    padding: 0;
+  }
+
+  .footer-buttons a {
+    line-height: 1;
+    padding: .8rem 0;
+    width: 170px;
+  }
+
+  /* GALLERY HOURS */
+
+  .open-days span {
+    font-size: var(--typography--font-size--smaller-medium);
+    line-height: 2.85;
+  }
+
+  .days {
+    padding-right: .25rem;
+  }
+
+  /* FOOTER BOTTOM */
+
+  .return-top {
+    font-size: var(--typography--font-size--extra-large);
+    padding: var(--layout--larger-small-spacing);
+  }
+
+}
+
+
+
+/* MIN-WIDTH 900px */
+
+@media screen and (min-width: 900px) {
+
+  /* HEADER */
+
+  .header-top {
+    display: none;
+  }
+
+  .menu-list-container {
+    display: none;
+  }
+
+  .header-logo-bigger {
+    display: block;
+  }
+
+  .header-logo-bigger img {
+    width: 370px;
+    margin-top: var(--layout--large-spacing);
+  }
+
+  .header-middle {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-between;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /* HEADER - Action button */
+
+  .header-action-buttons-default ul {
+    display: none;
+  }
+
+  .header-action-buttons-bigger {
+    display: block;
+    margin-top: var(--layout--larger-small-spacing);
+  }
+
+  .header-action-buttons-bigger a {
+    font-size: .9rem;
+    border: 1px solid var(--colors--primary-red);
+    color: var(--colors--primary-red);
+    padding: .35rem;
+    display: inline-block;
+    margin-top: var(--layout--small-spacing);
+    text-align: center;
+    width: 270px;
+    transition-duration: var(--transition--duration-short);
+  }
+
+  .header-action-buttons-bigger a:hover {
+    color: var(--colors--background);
+    background-color: var(--colors--primary-red);
+  }
+
+  /* HEADER - Menu button(for Larger screen) */
+
+  .header-menu-items {
+    display: block;
+    padding-top: var(--layout--small-spacing);
+  }
+
+  .header-menu-items a {
+    font-size: var(--layout--medium-spacing);
+    font-family: "Trebuchet MS";
+    font-weight: bold;
+    color: var(--colors--primary-darkgrey);
+    padding: var(--layout--medium-spacing) var(--layout--larger-medium-spacing);
+    display: inline-block;
+    text-align: center;
+    width: 150px;
+    display: block;
+  }
+
+  .home-menu-list {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--colors--primary-darkgrey);
+  }
+
+  .home-menu-list li {
+    transition-duration: var(--transition--duration-very-short);
+  }
+
+  .menu1:hover {
+    background-color: var(--colors--exhibition-text-area);
+  }
+
+  .menu2:hover {
+    background-color: var(--colors--visit-text-area);
+  }
+
+  .menu3:hover {
+    background-color: var(--colors--shop-text-area);
+  }
+
+  .menu4:hover {
+    background-color: var(--colors--about-menu-color);
+  }
+
+  .home-menu-list a {
+    font-size: 1.3rem;
+  }
+
+  .page-list {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .page-list a {
+    transition-duration: var(--transition--duration-very-short);
+  }
+
+  .page-list a:hover {
+    color: var(--colors--primary-red);
+    border-bottom: 8px solid var(--colors--primary-red);
+    padding-bottom: 1.4rem;
+    line-height: .3;
+  }
+
+
+  /* MAIN */
+
+  .main-container {
+    margin-bottom: var(--layout--very-large-spacing);
+  }
+
+  .hero-image {
+    height: 60vh;
+  }
+
+  article {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    gap: 0;
+    margin: 0;
+  }
+
+
+  /* WHAT'S ON NOW (EXHIBITION) */
+
+  .grid-bigger-exhibition {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: var(--layout--medium-spacing);
+  }
+
+  .exhibition-text p {
+    height: 200px;
+  }
+
+  .more-exhibitions {
+    grid-column: span 2;
+    max-width: 450px;
+  }
+
+  .more-exhibitions a {
+    padding: var(--layout--larger-small-spacing) 0;
+    width: 100%;
+  }
+
+  .more-exhibitions a:hover {
+    padding: var(--layout--larger-small-spacing) 0;
+    color: var(--colors--background);
+    background-color: var(--colors--primary-darkgrey);
+  }
+
+
+  /* PLAN VISIT */
+
+  .grid-bigger-visit {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: var(--layout--medium-spacing);
+    align-content: center;
+    padding-bottom: var(--layout--very-large-spacing);
+  }
+
+  .plan-visit img {
+    height: 400px;
+  }
+
+  /* SHOPS */
+
+  .grid-bigger-shops {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: var(--layout--medium-spacing);
+  }
+
+  /* FOOTER */
+
+
+}
+
+
+
+/* MIN-WIDTH 1100px */
+
+@media screen and (min-width: 1100px) {
+
+  /* GENERAL */
+
+  .header-container {
+    margin: 0 var(--layout--medium-spacing);
+  }
+
+  .header-middle,
+  .header-menu-items {
+    max-width: var(--layout--max-width);
+    margin: var(--layout--extra-large-spacing);
+  }
+
+  .main-container {
+    margin: var(--layout--larger-small-spacing) var(--layout--medium-spacing) var(--layout--very-large-spacing);
+  }
+
+  .footer-container {
+    margin: 0 var(--layout--medium-spacing) var(--layout--larger-small-spacing);
+  }
+
+  /* MAIN */
+
+  .hero-image {
+    height: 70vh;
+  }
+
+  main section {
+    max-width: var(--layout--max-width);
+    margin: var(--layout--extra-large-spacing);
+  }
+
+  .grid-bigger-exhibition {
+    column-gap: var(--layout--large-spacing);
+  }
+
+  .exhibition-text p {
+    height: 170px;
+  }
+
+  .grid-bigger-shops,
+  .grid-bigger-visit {
+    gap: var(--layout--large-spacing);
+  }
+
+  /* FOOTER */
+
+  .footer-container {
+    max-width: var(--layout--max-width);
+    margin: var(--layout--extra-large-spacing);
+  }
+
+}

@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+:root {
+
+  /* Spacing */
+  --layout--max-width: 1100px;
+  --layout--extra-large-spacing: 0 auto;
+  --layout--very-large-spacing: 3rem;
+  --layout--large-spacing: 2.5rem;
+  --layout--larger-medium-spacing: 2rem;
+  --layout--medium-spacing: 1.5rem;
+  --layout--larger-small-spacing: 1rem;
+  --layout--small-spacing: 0.5rem;
+
+
+  /* Font size */
+  --typography--font-size--extra-large: 1.8rem;
+  --typography--font-size--very-large: 1.5rem;
+  --typography--font-size--large: 1.3rem;
+  --typography--font-size--larger-medium: 1.2rem;
+  --typography--font-size--medium: 1.1rem;
+  --typography--font-size--smaller-medium: 1rem;
+  --typography--font-size--small: .8rem;
+
+
+  /* Color */
+  --colors--background: white;
+  --colors--primary-darkgrey: rgb(33 33 33);
+  --colors--primary-red: rgb(255 0 0);
+  --colors--text-area-default: rgb(237, 238, 238);
+  --colors--exhibition-text-area: rgb(134, 218, 249);
+  --colors--visit-text-area: rgb(136, 236, 196);
+  --colors--shop-text-area: rgb(251, 187, 230);
+  --colors--about-menu-color: rgb(249, 247, 107);
+
+
+  /* Text Line Height */
+  --lineheight--extra-large: 4;
+  --lineheight--large: 2.4;
+  --lineheight--larger-medium: 1.7;
+  --lineheight--medium: 1.6;
+  --lineheight--smaller-medium: 1.5;
+  --lineheight--small: 1.2;
+
+
+  /* Hover Effect: Transition */
+  --transition--duration-long: .8s;
+  --transition--duration-middle: .65s;
+  --transition--duration-short: .6s;
+  --transition--duration-very-short: .35s;
+
+
+  /*  Hover Effect: Opacity*/
+  --opacity--slightly: .7;
+  --opacity--middle: .4;
+
+
+}
